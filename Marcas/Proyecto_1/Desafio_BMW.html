@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coches BMW</title>
+   
+    <style>
+        /* --- Tus estilos originales de diseño --- */
+        img {
+            display: block;
+            width: 300px;
+            height: 210px;
+            object-fit: contain;
+        }
+
+
+
+
+        table {
+            margin: 24px auto;
+        }
+
+
+
+
+        td {
+            text-align: center;
+        }
+
+
+
+
+        .tabla-vertical img {
+            width: min(560px, 75vw);
+            height: 320px;
+        }
+
+
+
+
+        .tabla-mixta img {
+            width: min(360px, 40vw);
+            height: 220px;
+        }
+
+
+
+
+        .video {
+            width: min(640px, 75vw);
+            aspect-ratio: 16 / 9;
+            margin: 0 auto;
+        }
+
+
+
+
+        .video iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+
+
+
+        @media (max-width: 600px) {
+            img {
+                width: 40vw;
+                height: 150px;
+            }
+
+
+
+
+            .tabla-vertical img {
+                height: auto;
+            }
+
+
+
+
+            .tabla-mixta img {
+                height: 150px;
+            }
+        }
+
+
+
+
+        /* --- Centrado de todos los títulos del documento --- */
+        h1, h2, p {
+            text-align: center;
+        }
+
+
+
+
+        /* --- Lógica avanzada de pantallas (Efecto "Solo una sección") --- */
+       
+        /* 1. Por defecto, el índice está visible y las galerías ocultas */
+        #inicio {
+            display: block;
+        }
+        #suv, #berlinas, #deportivos {
+            display: none;
+        }
+
+
+
+
+        /* 2. Cuando se selecciona una categoría, ocultamos el índice principal automáticamente */
+        html:has(#suv:target) #inicio,
+        html:has(#berlinas:target) #inicio,
+        html:has(#deportivos:target) #inicio {
+            display: none;
+        }
+
+
+
+
+        /* 3. Mostramos únicamente la sección activa en la pantalla */
+        #suv:target, #berlinas:target, #deportivos:target {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+
+
+
+    <!-- ÍNDICE PRINCIPAL (Se ocultará solo al entrar en una categoría) -->
+    <header id="inicio">
+        <h1>Fotos BMW</h1>
+
+
+
+
+        <table border="1" cellpadding="12" cellspacing="0">
+            <tr>
+                <th>Tipos de Coches BMW</th>
+            </tr>
+            <tr>
+                <td><a href="#suv">SUV</a></td>
+            </tr>
+            <tr>
+                <td><a href="#berlinas">Berlinas</a></td>
+            </tr>
+            <tr>
+                <td><a href="#deportivos">BMW raros y vídeo</a></td>
+            </tr>
+        </table>
+    </header>
+
+
+
+
+    <!-- GALERÍA SUV -->
+    <section id="suv">
+        <h2>BMW SUV</h2>
+        <p><a href="#inicio">Volver al índice</a></p>
+
+
+
+
+        <table border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <a href="https://static.motor16.com/wp-content/uploads/2024/10/2024-BMW-XM-Manhart-11.webp" target="_blank">
+                        <img src="https://static.motor16.com/wp-content/uploads/2024/10/2024-BMW-XM-Manhart-11.webp" alt="BMW XM" title="BMW XM">
+                    </a>
+                    </a>
+                       <br><br>
+            <strong>Manhart MHXM 900 (Base XM)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 900 CV</li>
+                <li><strong>Lanzamiento:</strong> 2024</li>
+                <li><strong>0-100 km/h:</strong> 3.4 segundos</li>
+                <li><strong>V. Máxima:</strong> 290 km/h</li>
+                <li><strong>Precio:</strong> +250.000 €</li>
+            </ul>
+
+
+                </td>
+                <td>
+                    <a href="https://cdn-images.motor.es/image/m/1320w/fotos-noticias/2023/10/manhart-mhx6-202397880-1697028674_6.jpg" target="_blank">
+                        <img src="https://cdn-images.motor.es/image/m/1320w/fotos-noticias/2023/10/manhart-mhx6-202397880-1697028674_6.jpg" alt="BMW X6" title="BMW X6">
+                    </a>
+                              <br><br>
+            <strong>Manhart MHX6 700 Gold Edition</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 730 CV</li>
+                <li><strong>Lanzamiento:</strong> 2023</li>
+                <li><strong>0-100 km/h:</strong> 3.5 segundos</li>
+                <li><strong>V. Máxima:</strong> 290 km/h</li>
+                <li><strong>Precio:</strong> +250.000 €</li>
+            </ul>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://cdn-images.motor.es/image/m/1320w/fotos-noticias/2026/10/bmw-x5-2027-hibrido-enchufable-lanzamiento-espana-2026117094-1792403064_2.jpg" target="_blank">
+                        <img src="https://cdn-images.motor.es/image/m/1320w/fotos-noticias/2026/10/bmw-x5-2027-hibrido-enchufable-lanzamiento-espana-2026117094-1792403064_2.jpg" alt="BMW X5" title="BMW X5">
+                    </a>
+                        <br><br>
+            <strong>BMW X5 M60e xDrive (G65)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> ~570 CV</li>
+                <li><strong>Lanzamiento:</strong> 2026</li>
+                <li><strong>0-100 km/h:</strong> ~4.4 segundos</li>
+                <li><strong>V. Máxima:</strong> 250 km/h</li>
+                <li><strong>Precio:</strong> ~115.000 €</li>
+            </ul>
+
+
+                </td>
+                <td>
+                    <a href="https://images.ecestaticos.com/S_Wk_qdvPlslhRmTDBcdShRsPYo=/399x158:1890x1276/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fc7f%2F4e9%2Fbd5%2Fc7f4e9bd5ab20d4f2e702b340ea3e596.jpg" target="_blank">
+                        <img src="https://images.ecestaticos.com/S_Wk_qdvPlslhRmTDBcdShRsPYo=/399x158:1890x1276/1200x900/filters:fill(white):format(jpg)/f.elconfidencial.com%2Foriginal%2Fc7f%2F4e9%2Fbd5%2Fc7f4e9bd5ab20d4f2e702b340ea3e596.jpg" alt="BMW X3" title="BMW X3">
+                    </a>
+                       <br><br>
+            <strong>BMW X3 M50 xDrive (G45)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 398 CV</li>
+                <li><strong>Lanzamiento:</strong> 2025</li>
+                <li><strong>0-100 km/h:</strong> 4.6 segundos</li>
+                <li><strong>V. Máxima:</strong> 250 km/h</li>
+                <li><strong>Precio:</strong> 91.700 €</li>
+            </ul>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://a.ccdn.es/cnet/contents/media/bmw/x7/1294642.jpg/900x505cut/"_blank">
+                        <img src="https://a.ccdn.es/cnet/contents/media/bmw/x7/1294642.jpg/900x505cut/" alt="BMW X7 xDrive40i" title="BMW X7 xDrive40i">
+                    </a>
+                          <br><br>
+            <strong>BMW X7 xDrive40i</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 381 CV</li>
+                <li><strong>Lanzamiento:</strong> 2022</li>
+                <li><strong>0-100 km/h:</strong> 5.8 segundos</li>
+                <li><strong>V. Máxima:</strong> 250 km/h</li>
+                <li><strong>Precio:</strong> 110.000 €</li>
+            </ul>
+
+
+                </td>
+                <td>
+                    <a href="https://fotos.quecochemecompro.com/bmw-x1-hibrido/bmw-x1-hibrido-vista-delantera-dinamica.jpg?size=750x400" target="_blank">
+                        <img src="https://fotos.quecochemecompro.com/bmw-x1-hibrido/bmw-x1-hibrido-vista-delantera-dinamica.jpg?size=750x400" alt="BMW X1 xDrive30e" title="BMW X1 xDrive30e">
+                    </a>
+                           <br><br>
+            <strong>BMW X1 xDrive30e</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 326 CV</li>
+                <li><strong>Lanzamiento:</strong> 2022</li>
+                <li><strong>0-100 km/h:</strong> 5.6 segundos</li>
+                <li><strong>V. Máxima:</strong> 205 km/h</li>
+                <li><strong>Precio:</strong> 52.000 €</li>
+            </ul>
+
+
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+
+
+    <!-- GALERÍA BERLINAS -->
+    <section id="berlinas">
+        <h2>BMW Berlinas Deportivas</h2>
+        <p><a href="#inicio">Volver al índice</a></p>
+
+
+
+
+        <table class="tabla-vertical" border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <a href="https://commons.wikimedia.org/wiki/Special:FilePath/BMW_M5_CS.jpg" target="_blank">
+                        <img src="https://commons.wikimedia.org/wiki/Special:FilePath/BMW_M5_CS.jpg" alt="BMW M5 CS" title="BMW M5 CS">
+                    </a>
+                       <br><br>
+            <strong>BMW M5 CS (F90)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 635 CV</li>
+                <li><strong>Lanzamiento:</strong> 2021</li>
+                <li><strong>0-100 km/h:</strong> 3.0 segundos</li>
+                <li><strong>V. Máxima:</strong> 305 km/h</li>
+                <li><strong>Precio original:</strong> 207.300 €</li>
+            </ul>
+
+
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://autosdeprimera.com/wp-content/uploads/2026/05/bmw-m3-cs-handschalter-2026-frente.jpg" target="_blank">
+                        <img src="https://autosdeprimera.com/wp-content/uploads/2026/05/bmw-m3-cs-handschalter-2026-frente.jpg" alt="BMW M3 CS" title="BMW M3 CS">
+                    </a>
+                            <br><br>
+            <strong>BMW M3 CS Handschalter (Manual)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 473 CV</li>
+                <li><strong>Lanzamiento:</strong> 2026</li>
+                <li><strong>0-100 km/h:</strong> 4.2 segundos</li>
+                <li><strong>V. Máxima:</strong> 290 km/h</li>
+                <li><strong>Precio:</strong> +160.000 €</li>
+            </ul>
+
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://carwow-es-wp-0.imgix.net/bmw-m2-cs-67.jpg?auto=format&cs=tinysrgb&fit=crop&h=&ixlib=rb-1.1.0&q=60&w=1600" target="_blank">
+                        <img src="https://carwow-es-wp-0.imgix.net/bmw-m2-cs-67.jpg?auto=format&cs=tinysrgb&fit=crop&h=&ixlib=rb-1.1.0&q=60&w=1600"BMW M2 CS" title="BMW M2 CS">
+                    </a>
+                        <br><br>
+            <strong>Manhart MH2 560 (Base M2 G87)</strong>
+            <ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+                <li><strong>Potencia:</strong> 560 CV</li>
+                <li><strong>Lanzamiento:</strong> 2024</li>
+                <li><strong>0-100 km/h:</strong> 3.7 segundos</li>
+                <li><strong>V. Máxima:</strong> 300 km/h</li>
+                <li><strong>Precio:</strong> ~95.000 € (Con modificación)</li>
+            </ul>
+
+
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+
+
+       <!-- GALERÍA DEPORTIVOS -->
+    <section id="deportivos">
+        <h2>BMW raros</h2>
+        <p><a href="#inicio">Volver al índice</a></p>
+
+
+
+
+        <table class="tabla-mixta" border="1" cellpadding="10" cellspacing="0">
+            <tr>
+                <td>
+                    <a href="https://images.collectingcars.com/081461/AS-09-10-07.jpg?w=3840&q=95" target="_blank">
+                        <img src="https://images.collectingcars.com/081461/AS-09-10-07.jpg?w=3840&q=95" alt="BMW Isetta" title="BMW Isetta">
+                    </a>
+                    <strong>BMW Isetta 300</strong>
+<ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+    <li><strong>Potencia:</strong> 13 CV (Motor monocilíndrico)</li>
+    <li><strong>Lanzamiento:</strong> 1956 (Producción en serie)</li>
+    <li><strong>0-100 km/h:</strong> No aplica (Aprox. 32 segundos de 0 a 80 km/h)</li>
+    <li><strong>V. Máxima:</strong> 85 km/h</li>
+    <li><strong>Precio:</strong> ~32.000 € (Valor actual de colección)</li>
+</ul>
+                </td>
+                <td>
+                    <a href="https://imagenes.topgear.es/files/image_1920_1080/uploads/imagenes/2023/06/26/68c978ecb3f46.jpeg" target="_blank">
+                        <img src="https://imagenes.topgear.es/files/image_1920_1080/uploads/imagenes/2023/06/26/68c978ecb3f46.jpeg" alt="BMW Z1" title="BMW Z1">
+                    </a>
+           <strong>BMW Z1</strong>
+<ul style="margin: 5px 0 0 0; padding-left: 20px; font-size: 14px;">
+    <li><strong>Potencia:</strong> 170 CV (Motor 6 cilindros en línea)</li>
+    <li><strong>Lanzamiento:</strong> 1988 (Producción limitada)</li>
+    <li><strong>0-100 km/h:</strong> 7.9 segundos</li>
+    <li><strong>V. Máxima:</strong> 225 km/h</li>
+    <li><strong>Precio:</strong> ~50.000 € - 70.000 € (Valor actual en mercado de clásicos)</li>
+</ul>
+         </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Carrera de todos modelos</p>
+                    <div class="video">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/nCULhS2QEN4?si=flQGQ2KiFfybBACM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <p>Sonido del Motor</p>
+                    <audio controls src="Media/sonido_bmw.mp3">
+                        El navegador no soporta el elemento de audio.
+                    </audio>
+                </td>
+            </tr>
+        </table>
+    </section>
+
+
+</body>
+</html>
